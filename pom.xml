@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ================= BASIC PROJECT INFO ================= -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yourorg.aws</groupId>
+    <artifactId>aws-integration-clients</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>AWS Integration Clients</name>
+    <description>Reusable AWS client library for SQS, SNS, DynamoDB</description>
+
+    <!-- ================= JAVA CONFIG ================= -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- ================= AWS SDK BOM ================= -->
+    <!-- Controls versions of all AWS SDK v2 modules -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>bom</artifactId>
+                <version>2.25.67</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- ================= DEPENDENCIES ================= -->
+    <dependencies>
+
+        <!-- AWS SQS SDK -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>sqs</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ================= GITHUB PACKAGES PUBLISHING ================= -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/LasyaGupthaN/aws-integration-clients</url>
+        </repository>
+    </distributionManagement>
+
+</project>
