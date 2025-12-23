@@ -18,13 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 17 and Maven credentials
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
           server-id: github
-          settings-path: ${{ github.workspace }}
+          server-username: GITHUB_ACTOR
+          server-password: GITHUB_TOKEN
 
       - name: Deploy with Maven
         run: mvn clean deploy
