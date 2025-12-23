@@ -51,7 +51,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/LasyaGupthaN/aws-integration-clients</url>
+            <url>https://maven.pkg.github.com/LasyaGupthaN/awsclent</url>
         </repository>
     </distributionManagement>
 

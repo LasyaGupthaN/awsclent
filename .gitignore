@@ -40,6 +40,5 @@ build/
 
 /target/
 .idea/
-.github/
 *.class
 *.jar
